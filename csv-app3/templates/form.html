@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p>click <a href="/registered-applicants">Here</a> to view applicants</p>
+
+<form action="/validate" method="post">
+    <!-- first-name -->
+    <label for="first-name">first-name</label><br>
+    <input type="text" name="first-name"><br>
+
+    <!-- last-name -->
+    <label for="last-name">last-name</label><br>
+    <input type="text" name="last-name"><br>
+
+    <!-- index-number -->
+    <label for="index-number">index-number</label><br>
+    <input type="text" name="index-number"><br>
+
+    <!-- program/faculty -->
+    <label for="faculty">faculty</label><br>
+    <select name="faculty" id="">
+        <option disabled selected value="">--select faculty--</option>
+        <option value="IT">IT</option>
+        <option value="CS">CS</option>
+        <option value="Computer Engineering">Comp.Eng</option>
+        <option value="Philosophy">Philosophy</option>
+        <option value="Psychology">Psychology</option>
+        <option value="Telecommunication Engineering">Telecom</option>
+        <option value="Media law">Media law</option>
+    </select>
+    <br>
+
+    <!-- activity of interest -->
+    <label for="activity">activity</label><br>
+    <select name="activity" id="">
+        <option disabled selected value="">--select activity--</option>
+        <option value="Football">Foot ball</option>
+        <option value="Volleyball">Volley ball</option>
+        <option value="Basketball">Basket ball</option>
+        <option value="Chess">Chess</option>
+        <option value="Turtle racing">Turtle racing</option>
+        <option value="Ant racing">Ant racing</option>
+    </select>
+    <br>
+
+    <!-- submit form -->
+    <input type="submit" value="submit">
+</form>
+{% endblock %}

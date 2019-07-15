@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<div>
+    <p>If you can see this, it means you registered with these credentials</p>
+    <ul>
+        <p>Full name, index number, Faculty and activity..</p>
+        {% for i in obj %}
+        <li>Full name: {{i[0]}} {{i[1]}}</li>
+        <li>Index number: {{i[2]}}</li>
+        <li>Faculty: {{i[3]}}</li>
+        <li>Activity: {{i[4]}}</li>
+        <br>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
