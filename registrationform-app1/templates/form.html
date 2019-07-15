@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+    <form action="/validate" method="POST">
+        <label for="name">Name</label><br>
+        <input type="text" name="name"><br>
+
+        <label for="course">Course</label><br>
+        <select name="course">
+            <option value="" disabled selected>course</option>
+            <option value="IT">IT</option>
+            <option value="CS">CS</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Psychology">Psychology</option>
+        </select><br>
+
+        <label for="number">Number</label><br>
+        <input type="text" name="number"><br>
+
+        <input type="submit" value="Register"><br>
+    </form>
+{% endblock %}
