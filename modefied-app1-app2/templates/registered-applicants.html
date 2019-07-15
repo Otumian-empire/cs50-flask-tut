@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+    {% block body %}
+        <table>
+            <td>
+                <tr>First-name</tr>
+                <tr>Last-name</tr>
+                <tr>Index-number</tr>
+                <tr>Faculty</tr>
+                <tr>Activity</tr>
+            </td>
+            <br>
+            {% for applicant in db %}
+                <td>
+                    <tr>{{ applicant[0] }}</tr>
+                    <tr>{{ applicant[1] }}</tr>
+                    <tr>{{ applicant[2] }}</tr>
+                    <tr>{{ applicant[3] }}</tr>
+                    <tr>{{ applicant[4] }}</tr>
+                </td><br>
+            {% endfor %}
+
+        </table>
+
+    {% endblock %}
